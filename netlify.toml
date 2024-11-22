@@ -1,0 +1,11 @@
+[functions]
+  external_node_modules = ["express", "mongoose", "cors", "multer", "helmet", "dotenv", "body-parser"]
+  node_bundler = "esbuild"
+  included_files = ["public/assets/**/*"]
+
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
